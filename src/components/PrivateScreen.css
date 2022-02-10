@@ -1,0 +1,12 @@
+.privateData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+
+#logout {
+    margin-top: 5px;
+    font-size: 1em;
+    margin-left: 20px;
+}
