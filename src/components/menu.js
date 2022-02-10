@@ -149,7 +149,7 @@ class menu extends Component {
               </div>
               {!this.props.hideUI ?               <div className="shop">
                 
-                <button className='shop-button' onClick={this.toggleShop}>       <i className="fas fa-shopping-cart"></i>
+                <button className='switchTriviaButton' onClick={this.toggleShop}>       <i className="fas fa-shopping-cart"></i>
                 Магазин</button>
             
               </div> : null}

@@ -16,7 +16,7 @@ const callToController = async (email, newDoneTests) => {
   }
 
   try {
-    await axios.put('/api/auth/changedonetests', {params: {email, newDoneTests}}, config);
+    await axios.put('api/auth/changedonetests', {params: {email, newDoneTests}}, config);
     console.log("YAY SET AXIOS DONETESTS ON EMAIL", email, "TO ", newDoneTests);
   } catch(error) {
     console.log(error);

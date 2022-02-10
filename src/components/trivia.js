@@ -129,7 +129,7 @@ import tests from './questions';
         // if gameover these points will go into coins
         if (isGameOver) {
           console.log('POINTS GOING INTO COINS')
-          setTimeout(() => this.props.dispatch({type: "ADD_VALUE", value: this.state.currentScore}), 25)
+          setTimeout(() => this.props.dispatch({type: "ADD_VALUE", value: this.state.currentScore}), 2500)
           // прибавить в базе данных количество монет на currentScore (игра закончилась)
           
 
@@ -214,12 +214,12 @@ import tests from './questions';
         // right answer. set isTrivia to false (overflow) gameover ALREADY ZERO
         this.disableQuestion();
         this.handleScore(true, true);
-        setTimeout(() => this.gameOver(0), 30);
+        setTimeout(() => this.gameOver(0), 3000);
       } else {
         // right answer. next question number (+1 state) and update question (no overflow)
         this.disableQuestion();
         this.handleScore(true, false);
-        setTimeout(this.updateQuestion, 20);
+        setTimeout(this.updateQuestion, 2000);
       }
     } else {
       this.setState({
@@ -229,12 +229,12 @@ import tests from './questions';
         // wrong answer + overflow. set isTrivia to false gameover
         this.handleScore(false, true);
         this.disableQuestion();
-        setTimeout(() => this.gameOver(0), 30);
+        setTimeout(() => this.gameOver(0), 3000);
       } else {
         // no overflow + wrong answer next question number (+1 state) and update question
         this.handleScore(false, false);
         this.disableQuestion();
-        setTimeout(this.updateQuestion, 25);
+        setTimeout(this.updateQuestion, 2500);
       }
     }
   }

@@ -49,7 +49,7 @@ handleChangeDoneTests(email, newDoneTests) {
   }
 
   try {
-    await axios.put('/api/auth/changedonetests', {params: {email, newDoneTests}}, config);
+    await axios.put('api/auth/changedonetests', {params: {email, newDoneTests}}, config);
     console.log("YAY SET AXIOS DONETESTS ON EMAIL", email, "TO ", newDoneTests);
   } catch(error) {
     console.log(error);
@@ -72,7 +72,7 @@ getDoneTestsOnStart(email, needIncrement) {
 }
 
 try {
-  const {data} = await axios.get("/api/auth/getUser", {params: {
+  const {data} = await axios.get("api/auth/getUser", {params: {
     email
 }}, config);
 
@@ -102,7 +102,7 @@ getUserData(receivedEmail) {
         }
     }
     try {
-        const {data} = await axios.get("/api/auth/getUser", {params: {
+        const {data} = await axios.get("api/auth/getUser", {params: {
             email
         }}, config);
 
@@ -253,10 +253,10 @@ getUserHandler(receivedEmail);
     }
     console.log(`trying to assign ${skippers+1} to ${email}`)
       try {
-        await axios.put("/api/auth/updateskippers", {params: {email, skippers: skippers+1}}, config);
+        await axios.put("api/auth/updateskippers", {params: {email, skippers: skippers+1}}, config);
         console.log('SKIPPERS UPDATED YAY')
 
-        
+       
 
 
       } catch (error) {
@@ -284,7 +284,7 @@ getUserHandler(receivedEmail);
     }
     console.log(`trying to assign ${newCoins} to ${email}`)
       try {
-        await axios.put("/api/auth/updatecoins", {params: {email, newCoins}}, config);
+        await axios.put("api/auth/updatecoins", {params: {email, newCoins}}, config);
         console.log('I HAVE DONE IT YAY UPDATED')
 
         
