@@ -1,3 +1,4 @@
+require('dotenv').config({path: 'config'})
 const mongoose = require('mongoose');
 
 const connectDB = async() => {
